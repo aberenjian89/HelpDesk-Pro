@@ -2,11 +2,13 @@
 
 **Background and Overview**
 
-Being able to measure performance and quality is one of most important key that today most companies pursuing. Specially IT departments in most companies care about their internal and external user’s actives and make sure that all of their request are getting processed and deliver it in time manner.  
+Nowadays most companies need to assess their employee’s performance, in order for them to do their tasks in a timely manner. For example, most IT departments value their user’s internal and external activities. There are many different departments within IT, one of the major parts is help desk. Help desk would ensure the tickets and issues get resolved.
 
-HelpDesk Pro is a dashboard that is designed to visualize the most important aspect of Help Desk System.
 
-HelpDesk Pro takes specific data and represent them in different level of details interactively. For demo purpose the data are get generated randomly but, these data can have replaced easily with real time data.
+HelpDesk Pro is a dashboard that is designed to create a better visualized lists of important data.
+
+HelpDesk Pro can take specific data and represent them in different level of details interactively. For demo purposes, the data will be generated randomly but, these data can have replaced easily with real time data.
+
 
 
 **Functionality & MVP**

@@ -1,0 +1,35 @@
+.body{
+    font-family: 'Roboto Slab', serif !important;
+}
+
+.tickets-status{
+    border:1px solid #FBB13C;
+    width: 80%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 30px;
+    margin: 45px auto 0 auto;
+    text-align: center;
+}
+
+.chart-container{
+    width: 80%;
+    border: 1px solid #FBB13C;
+    border-radius:30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 10px auto;
+
+}
+
+.tickets-status span:first-child{
+    color: #2176AE;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tickets-status span:nth-child(2) {
+    color: #DD551F;
+    font-size: 18px;
+    padding-left: 10px;
+}

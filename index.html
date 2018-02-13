@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HelpDesk-Pro</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="application.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row tickets-status">
+                <div class="col">
+                    <span class="title">Close:</span><span class="close-counter" data-count="1432">2543</span>
+                </div>
+                <div class="col">
+                    <span class="title">Open:</span><span class="open-counter" data-count="89">120</span>
+                </div>
+                <div class="col">
+                    <span class="title">Hold:</span><span class="onhold-counter" data-count="82">65</span>
+                </div>
+                <div class="col">
+                    <span class="title">Invalid:</span><span class="invalid-counter" data-count="23">25</span>
+                </div>
+            </div>
+
+            <div class="row chart-container">
+                <div class="col-md-6">
+                    <canvas id="pie-chart" width="400" height="300"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="ticket-bar" width="420" height="330"></canvas>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+        <script src="bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+        <script src="./bundle.js"></script>
+    </body>
+</html>

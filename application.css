@@ -1,5 +1,6 @@
 .body{
     font-family: 'Roboto Slab', serif !important;
+
 }
 
 .tickets-status{
@@ -32,4 +33,101 @@
     color: #DD551F;
     font-size: 18px;
     padding-left: 10px;
+}
+
+.event{
+    width: 80%;
+    border: 1px solid #FBB13C;
+    border-radius: 30px;
+    margin: 10px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.event-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #FBB13C;
+    border-radius: 30px;
+}
+
+#recent-ticket{
+    padding: 0 !important;
+}
+
+.recent-hold{
+    list-style: none;
+}
+
+.event ul li{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.ticket-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.urgent-priority{
+    width: 50px;
+    height: 20px;
+    font-size: 9px;
+    padding: 3px;
+    text-align: center;
+    background-color: #DD551F;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.high-priority{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    font-size: 9px;
+    padding: 3px;
+    background-color: #FBB13C;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+
+
+}
+
+.medium-priority{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    font-size: 9px;
+    padding: 3px;
+    background-color: #2176AE;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+
+}
+
+.low-priority{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    font-size: 9px;
+    padding: 3px;
+    background-color: #57B8FF;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.ticket-header{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-evenly;*/
+    padding-right: 20px;
+    font-size: 14px;
 }

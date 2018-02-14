@@ -6,20 +6,19 @@
         <link rel="stylesheet" href="application.css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">    </head>
     <body>
-
         <div class="container-fluid">
             <div class="row tickets-status">
                 <div class="col">
-                    <span class="title">Close:</span><span class="close-counter" data-count="1432">2543</span>
+                    <span class="title">Close:</span><span id="close-counter" data-count="1432">2543</span>
                 </div>
                 <div class="col">
-                    <span class="title">Open:</span><span class="open-counter" data-count="89">120</span>
+                    <span class="title">Open:</span><span id="open-counter" data-count="89">120</span>
                 </div>
                 <div class="col">
-                    <span class="title">Hold:</span><span class="onhold-counter" data-count="82">65</span>
+                    <span class="title">Hold:</span><span id="onhold-counter" data-count="82">65</span>
                 </div>
                 <div class="col">
-                    <span class="title">Invalid:</span><span class="invalid-counter" data-count="23">25</span>
+                    <span class="title">Invalid:</span><span id="invalid-counter" data-count="23">25</span>
                 </div>
             </div>
 
@@ -31,9 +30,84 @@
                     <canvas id="ticket-bar" width="420" height="330"></canvas>
                 </div>
             </div>
+            <div class="row event">
+                <div class="col-md-6">
+                    <div class="event-container">
+                        <ul id="recent-ticket">
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="low-priority">Low</span>-->
+                                    <!--<span class="ticket-header">Ticket# 6789 - David Patterson</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="medium-priority">Medium</span>-->
+                                    <!--<span class="ticket-header">Ticket# 4312 - John Smith</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="low-priority">Low</span>-->
+                                    <!--<span class="ticket-header">Ticket# 1247 - Jim Clute</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="high-priority">High</span>-->
+                                    <!--<span class="ticket-header">Ticket# 2389 - John Lee</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="urgent-priority">Urgent</span>-->
+                                    <!--<span class="ticket-header">Ticket# 1234 - Kerry Orland</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="low-priority">Low</span>-->
+                                    <!--<span class="ticket-header">Ticket# 9743 - John Lee</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                     <!--<span class="high-priority">High</span>-->
+                                     <!--<span class="ticket-header">Ticket# 6590 - Amir Taiebi</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="urgent-priority">Urgent</span>-->
+                                    <!--<span class="ticket-header">Ticket# 8623 - Linda Perry</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<div class="ticket-container">-->
+                                    <!--<span class="low-priority">Low</span>-->
+                                    <!--<span class="ticket-header">Ticket# 8745 - Marta Hendrson</span>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="event-container">
+                        <ul id="recent-hold">
+                            <li>Ticket# 6789 - David Patterson</li>
+                            <li>Ticket# 1345 - John Smith</li>
+                            <li>Ticket# 9845 - Sara Johnson</li>
+                            <li>Ticket# 3467 - Kerry Orland</li>
+                            <li>Ticket# 1289 - David Patterson</li>
+                            <li>Ticket# 3456 - William Jones</li>
+                            <li>Ticket# 7890 - Reza Taghavian</li>
+                            <li>Ticket# 3489 - Linda Perry</li>
+                            <li>Ticket# 6903 - Marta Hendrson</li>
+                        </ul>
+                    </div>
+                </div>
 
-
-
+            </div>
         </div>
 
 

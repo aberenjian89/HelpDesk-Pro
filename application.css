@@ -53,8 +53,18 @@
     border-radius: 30px;
 }
 
+.event-header{
+    padding: 10px 5px 5px 10px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
 #recent-ticket{
     padding: 0 !important;
+}
+
+#recent-hold{
+    padding:  0 !important;
 }
 
 .recent-hold{

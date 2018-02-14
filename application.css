@@ -141,3 +141,12 @@
     padding-right: 20px;
     font-size: 14px;
 }
+
+.network{
+    width: 80%;
+    border: 1px solid #FBB13C;
+    border-radius: 30px;
+    margin: 10px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

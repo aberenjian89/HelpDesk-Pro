@@ -1,0 +1,44 @@
+{
+  "name": "chartjs-plugin-streaming",
+  "version": "1.2.0",
+  "description": "Chart.js plugin for live streaming data",
+  "main": "dist/chartjs-plugin-streaming.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "chart.js": "^2.6.0",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-file": "^0.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.0.0",
+    "merge-stream": "^1.0.1",
+    "rollup-stream": "^1.23.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagix/chartjs-plugin-streaming.git"
+  },
+  "keywords": [
+    "chart.js",
+    "plugin",
+    "live",
+    "streaming",
+    "scroll"
+  ],
+  "author": "Akihiko Kusanagi <nagi@nagi-p.com> (https://nagix.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nagix/chartjs-plugin-streaming/issues"
+  },
+  "homepage": "https://nagix.github.io/chartjs-plugin-streaming"
+}

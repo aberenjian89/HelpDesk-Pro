@@ -172,3 +172,7 @@
     justify-content: center;
 }
 
+.clear-center{
+    display:flex;
+    justify-content: center;
+}

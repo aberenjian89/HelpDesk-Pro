@@ -159,6 +159,19 @@
                     <canvas id="bandwidth-chart" width="300" height="100"></canvas>
                 </div>
             </div>
+            <div class="row meter">
+                <!--<div style="margin: 0 auto">-->
+                    <div class="col-lg-4">
+                        <div id="meter-cpu-div"></div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="meter-memory-div"></div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="meter-network-div"></div>
+                    </div>
+                <!--</div>-->
+            </div>
         </div>
 
 
@@ -185,6 +198,9 @@
         <script src="bower_components/jquery.counterup/jquery.counterup.min.js"></script>
         <!--<script type="text/javascript" src="bower_components/chartjs-plugin-streaming/dist/chartjs-plugin-streaming.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.4/radial/gauge.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <div id="chart_div" style="width: 400px; height: 120px;"></div>
         <script src="./bundle.js"></script>
     </body>
 </html>

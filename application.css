@@ -150,3 +150,25 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.meter{
+    width: 80%;
+    border: 1px solid #FBB13C;
+    border-radius: 30px;
+    margin: 10px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.meter-container{
+ margin: 0 auto;
+}
+
+
+.row-meter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

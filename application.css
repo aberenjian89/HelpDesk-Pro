@@ -4,10 +4,24 @@ body{
     height: 100vh;
 }
 
+.clear-center span{
+    margin: 20px auto 0 auto;
+    color: #DD551F;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.desc span{
+    color: #FBB13C;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 10px  ;
+}
+
 .tickets-status{
     display: none;
     flex-wrap: wrap;
-    border:1px solid #FBB13C;
+    /*border:1px solid #FBB13C;*/
     width: 80%;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -25,7 +39,7 @@ body{
 
 .chart-container{
     width: 80%;
-    border: 1px solid #FBB13C;
+    /*border: 1px solid #FBB13C;*/
     border-radius:4px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -59,7 +73,7 @@ body{
     flex-direction: column;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 1px solid #FBB13C;
+    /*border: 1px solid #FBB13C;*/
     border-radius: 4px;
     background-color: #fff;
 }
@@ -167,7 +181,7 @@ body{
 
 .network{
     width: 80%;
-    border: 1px solid #FBB13C;
+    /*border: 1px solid #FBB13C;*/
     border-radius: 4px;
     margin: -20px auto;
     padding-top: 30px;
@@ -177,7 +191,7 @@ body{
 
 .meter{
     width: 80%;
-    border: 1px solid #FBB13C;
+    /*border: 1px solid #FBB13C;*/
     border-radius: 4px;
     margin: 30px auto;
     padding-top: 30px;

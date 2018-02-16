@@ -87,7 +87,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 document.addEventListener("DOMContentLoaded",()=>{
-    setTimeout( () => $('.tickets-status').fadeIn(1000).css('display','flex'),2000)
+
+    // setTimeout(()=> $('.loader').removeClass('loader'),3000);
+    setTimeout( () => $('#main-container').css('opacity','1'),3000);
 
     Object(__WEBPACK_IMPORTED_MODULE_0__counterup__["a" /* default */])();
     Object(__WEBPACK_IMPORTED_MODULE_1__tickets_charts__["a" /* default */])();

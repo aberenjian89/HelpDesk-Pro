@@ -3,208 +3,214 @@
         <meta charset="UTF-8">
         <title>HelpDesk-Pro</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="loader.css">
         <link rel="stylesheet" href="application.css"/>
     </head>
     <body>
+    <div class="custom-loader">
+        <div class="loader"></div>
+    </div>
+    <div id="main-container">
         <div class="container-fluid">
-            <div class="row tickets-status">
-                <div class="col">
-                    <span class="title">Close:</span><span id="close-counter" data-count="2543">2543</span>
+                <div class="row tickets-status">
+                    <div class="col">
+                        <span class="title">Close:</span><span id="close-counter" data-count="2543">2543</span>
+                    </div>
+                    <div class="col">
+                        <span class="title">Open:</span><span id="open-counter" data-count="80">80</span>
+                    </div>
+                    <div class="col">
+                        <span class="title">Hold:</span><span id="hold-counter" data-count="65">65</span>
+                    </div>
+                    <div class="col">
+                        <span class="title">Invalid:</span><span id="invalid-counter" data-count="25">25</span>
+                    </div>
                 </div>
-                <div class="col">
-                    <span class="title">Open:</span><span id="open-counter" data-count="80">80</span>
-                </div>
-                <div class="col">
-                    <span class="title">Hold:</span><span id="hold-counter" data-count="65">65</span>
-                </div>
-                <div class="col">
-                    <span class="title">Invalid:</span><span id="invalid-counter" data-count="25">25</span>
-                </div>
-            </div>
 
-            <div class="row chart-container">
-                <div class="col-md-6">
-                    <canvas id="pie-chart" width="400" height="300"></canvas>
-                </div>
-                <div class="col-md-6">
-                    <canvas id="ticket-bar" width="420" height="330"></canvas>
-                </div>
-            </div>
-            <div class="row event">
-                <div class="col-md-6 clear-padding-left clear-padding-right">
-                    <div class="event-container">
-                        <span class="event-header">Recent Open Tickets: </span>
-                        <ul id="recent-ticket">
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="low-priority">Low</span>
-                                    <span class="ticket-header">Ticket# 6789</span>
-                                    <span class="ticket-header">David Patterson</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="medium-priority">Medium</span>
-                                    <span class="ticket-header">Ticket# 4312</span>
-                                    <span class="ticket-header">John Smith</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="low-priority">Low</span>
-                                    <span class="ticket-header">Ticket# 1247</span>
-                                    <span class="ticket-header">Jim Clute</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="high-priority">High</span>
-                                    <span class="ticket-header">Ticket# 2389</span>
-                                    <span class="ticket-header">John Lee</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="urgent-priority">Urgent</span>
-                                    <span class="ticket-header">Ticket# 1234</span>
-                                    <span class="ticket-header">Kerry Orland</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="low-priority">Low</span>
-                                    <span class="ticket-header">Ticket# 9743</span>
-                                    <span class="ticket-header">John Lee</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                     <span class="high-priority">High</span>
-                                     <span class="ticket-header">Ticket# 6590</span>
-                                     <span class="ticket-header">Amir Taiebi</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="urgent-priority">Urgent</span>
-                                    <span class="ticket-header">Ticket# 8623</span>
-                                    <span class="ticket-header">Linda Perry</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="low-priority">Low</span>
-                                    <span class="ticket-header">Ticket# 8745</span>
-                                    <span class="ticket-header">Marta Hendrson</span>
-                                </div>
-                            </li>
-                        </ul>
+                <div class="row chart-container">
+                    <div class="col-md-6">
+                        <canvas id="pie-chart" width="400" height="300"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <canvas id="ticket-bar" width="420" height="330"></canvas>
                     </div>
                 </div>
-                <div class="col-md-6 clear-padding-right">
-                    <div class="event-container">
-                        <span class="event-header">Recent Close Ticket:</span>
-                        <ul id="recent-hold">
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="high-priority">Urgent</span>
-                                    <span class="ticket-header">Ticket# 6789</span>
-                                    <span class="ticket-header">David Patterson</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="low-priority">Low</span>
-                                    <span class="ticket-header">Ticket# 1345</span>
-                                    <span class="ticket-header">John Smith</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="high-priority">High</span>
-                                    <span class="ticket-header">Ticket# 9845</span>
-                                    <span class="ticket-header">Sara Johnson</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="medium-priority">Medium</span>
-                                    <span class="ticket-header">Ticket# 3467</span>
-                                    <span class="ticket-header">Kerry Orland</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="urgent-priority">Urgent</span>
-                                    <span class="ticket-header">Ticket# 1289</span>
-                                    <span class="ticket-header">David Patterson</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="low-priority">Low</span>
-                                    <span class="ticket-header">Ticket# 3456</span>
-                                    <span class="ticket-header">William Jones</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="urgent-priority">Urgent</span>
-                                    <span class="ticket-header">Ticket# 7890</span>
-                                    <span class="ticket-header">Reza Taghavian</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="high-priority">High</span>
-                                    <span class="ticket-header">Ticket# 3489</span>
-                                    <span class="ticket-header">Linda Perry</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-container">
-                                    <span class="medium-priority">Medium</span>
-                                    <span class="ticket-header">Ticket# 6903</span>
-                                    <span class="ticket-header">Marta Hendrson</span>
-                                </div>
-                            </li>
-                        </ul>
+                <div class="row event">
+                    <div class="col-md-6 clear-padding-left clear-padding-right">
+                        <div class="event-container">
+                            <span class="event-header">Recent Open Tickets: </span>
+                            <ul id="recent-ticket">
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="low-priority">Low</span>
+                                        <span class="ticket-header">Ticket# 6789</span>
+                                        <span class="ticket-header">David Patterson</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="medium-priority">Medium</span>
+                                        <span class="ticket-header">Ticket# 4312</span>
+                                        <span class="ticket-header">John Smith</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="low-priority">Low</span>
+                                        <span class="ticket-header">Ticket# 1247</span>
+                                        <span class="ticket-header">Jim Clute</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="high-priority">High</span>
+                                        <span class="ticket-header">Ticket# 2389</span>
+                                        <span class="ticket-header">John Lee</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="urgent-priority">Urgent</span>
+                                        <span class="ticket-header">Ticket# 1234</span>
+                                        <span class="ticket-header">Kerry Orland</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="low-priority">Low</span>
+                                        <span class="ticket-header">Ticket# 9743</span>
+                                        <span class="ticket-header">John Lee</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                         <span class="high-priority">High</span>
+                                         <span class="ticket-header">Ticket# 6590</span>
+                                         <span class="ticket-header">Amir Taiebi</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="urgent-priority">Urgent</span>
+                                        <span class="ticket-header">Ticket# 8623</span>
+                                        <span class="ticket-header">Linda Perry</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="low-priority">Low</span>
+                                        <span class="ticket-header">Ticket# 8745</span>
+                                        <span class="ticket-header">Marta Hendrson</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 clear-padding-right">
+                        <div class="event-container">
+                            <span class="event-header">Recent Close Ticket:</span>
+                            <ul id="recent-hold">
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="high-priority">Urgent</span>
+                                        <span class="ticket-header">Ticket# 6789</span>
+                                        <span class="ticket-header">David Patterson</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="low-priority">Low</span>
+                                        <span class="ticket-header">Ticket# 1345</span>
+                                        <span class="ticket-header">John Smith</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="high-priority">High</span>
+                                        <span class="ticket-header">Ticket# 9845</span>
+                                        <span class="ticket-header">Sara Johnson</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="medium-priority">Medium</span>
+                                        <span class="ticket-header">Ticket# 3467</span>
+                                        <span class="ticket-header">Kerry Orland</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="urgent-priority">Urgent</span>
+                                        <span class="ticket-header">Ticket# 1289</span>
+                                        <span class="ticket-header">David Patterson</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="low-priority">Low</span>
+                                        <span class="ticket-header">Ticket# 3456</span>
+                                        <span class="ticket-header">William Jones</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="urgent-priority">Urgent</span>
+                                        <span class="ticket-header">Ticket# 7890</span>
+                                        <span class="ticket-header">Reza Taghavian</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="high-priority">High</span>
+                                        <span class="ticket-header">Ticket# 3489</span>
+                                        <span class="ticket-header">Linda Perry</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-container">
+                                        <span class="medium-priority">Medium</span>
+                                        <span class="ticket-header">Ticket# 6903</span>
+                                        <span class="ticket-header">Marta Hendrson</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row network">
-                <div class="col-lg-12">
-                    <canvas id="bandwidth-chart" width="300" height="100"></canvas>
+                <div class="row network">
+                    <div class="col-lg-12">
+                        <canvas id="bandwidth-chart" width="300" height="100"></canvas>
+                    </div>
+                </div>
+                <div class="row meter">
+                        <div class="col-lg-4 clear-center">
+                            <div id="meter-cpu-div"></div>
+                        </div>
+                        <div class="col-lg-4 clear-center">
+                            <div id="meter-memory-div"></div>
+                        </div>
+                        <div class="col-lg-4 clear-center">
+                            <div id="meter-network-div"></div>
+                        </div>
                 </div>
             </div>
-            <div class="row meter">
-                    <div class="col-lg-4 clear-center">
-                        <div id="meter-cpu-div"></div>
-                    </div>
-                    <div class="col-lg-4 clear-center">
-                        <div id="meter-memory-div"></div>
-                    </div>
-                    <div class="col-lg-4 clear-center">
-                        <div id="meter-network-div"></div>
-                    </div>
+            <div class="row footer">
+                <div class="col-lg-12 ">
+                    <ul class="footer-menu">
+                        <li>
+                            <a href="https://github.com/aberenjian89/HelpDesk-Pro">
+                                <i class="fab fa-github-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/alireza-berenjian/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="row footer">
-            <div class="col-lg-12 container">
-                <ul class="footer-menu">
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-github-alt"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    </div>
 
 
 

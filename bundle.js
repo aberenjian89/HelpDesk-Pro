@@ -82,9 +82,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_0__counterup__["a" /* default */])();
+
+
+
 
 document.addEventListener("DOMContentLoaded",()=>{
+    setTimeout( () => $('.tickets-status').fadeIn(1000).css('display','flex'),2000)
+
+    Object(__WEBPACK_IMPORTED_MODULE_0__counterup__["a" /* default */])();
     Object(__WEBPACK_IMPORTED_MODULE_1__tickets_charts__["a" /* default */])();
     Object(__WEBPACK_IMPORTED_MODULE_2__recent_events__["a" /* default */])();
     Object(__WEBPACK_IMPORTED_MODULE_3__tickets_count__["a" /* default */])();
@@ -194,7 +199,7 @@ let ChartGenerator =function () {
         },
         options: {
             responsive:true,
-            events: ['click'],
+            events: ['click','mousemove'],
             onClick: function (evt) {
                 if (bar.getElementsAtEvent(evt).length <=0){
                     return ;
@@ -221,6 +226,12 @@ let ChartGenerator =function () {
                     }
                 });
 
+            },
+            onHover: function (evt) {
+                if (bar.getElementsAtEvent(evt).length <=0){
+                    return ;
+                }
+                console.log(evt);
             }
 
         }
@@ -287,7 +298,7 @@ let  RecentEvents = function () {
         {priority: 3,ticket:6903,author: 'Marta Hendrson'},
         {priority: 2,ticket:8921,author: 'Daniel Rodmore'},
         {priority: 1,ticket:9321,author: 'Samuel Johnson'},
-        {priority: 3,ticket:4356,author: 'Maryam Shokohzadeh'}
+        {priority: 3,ticket:4356,author: 'Maryam Shokohi'}
     ];
 
 
@@ -308,7 +319,10 @@ let  RecentEvents = function () {
         let li = document.createElement('li');
         let data = Rtickets[Rindex];
         let spanTag = document.createElement('span');
-        let str = `Ticket# ${data.ticket} - ${data.author}`;
+        let spanTicket = document.createElement('span');
+        spanTicket.appendChild(document.createTextNode(`Ticket# ${data.ticket}`));
+        spanTicket.setAttribute("class","ticket-header");
+        let str = `${data.author}`;
 
 
 
@@ -326,6 +340,7 @@ let  RecentEvents = function () {
             spanTag.setAttribute("class","low-priority")
         }
         div.appendChild(spanTag);
+        div.appendChild(spanTicket);
         let spanText = document.createElement('span');
         spanText.appendChild(document.createTextNode(str));
         spanText.setAttribute("class","ticket-header");
@@ -353,7 +368,9 @@ let  RecentEvents = function () {
         let li = document.createElement('li');
         let data = Htickets[Hindex];
         let spanTag = document.createElement('span');
-        let str = `Ticket# ${data.ticket} - ${data.author}`;
+        let spanTicket = document.createElement('span');
+        spanTicket.appendChild(document.createTextNode(`Ticket# ${data.ticket}`));
+        let str = `${data.author}`;
 
 
 
@@ -371,6 +388,8 @@ let  RecentEvents = function () {
             spanTag.setAttribute("class","low-priority")
         }
         div.appendChild(spanTag);
+        spanTicket.setAttribute("class","ticket-header");
+        div.appendChild(spanTicket);
         let spanText = document.createElement('span');
         spanText.appendChild(document.createTextNode(str));
         spanText.setAttribute("class","ticket-header");
